@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>singup</title>
+
+    <link rel="stylesheet" href="fonts/fontawesome-free/css/all.min.css">
+    <link rel=" stylesheet" href="css/style.css">
+</head>
+
+
+
+<body class="signup-page">
+
+    <div class="d-grid">
+
+        <div class="signup-img">
+            <img src="imgs/car lifted on auto lift_5361256.png" alt="car lifted on auto lift" width="500">
+        </div>
+
+        <div class="left-container">
+            <h1 class="form-header">Sign up</h1>
+
+            <div class="signup-form">
+
+                <form action="/profile-setting.html" onsubmit="return save()">
+                    <table>
+                        <tr>
+                            <td>
+                                <i class="fa fa-user icon"></i>
+                                <input type="text" placeholder="username" id='username' pattern="^([a-z0-9]|[-._](?![-._])){3,}$" required onfocus="removeIcon(this)" onfocusout="resetIcon(this); validate(this);">
+                                <i class="fa fa-times-circle error-icon tooltip">
+                                    <span class="tooltiptext">Enter 3 or more charcter (no special chars or space and start with letter) </span>
+                                </i>
+                            </td>
+                        </tr>
+
+                        <tr class="half">
+                            <td>
+                                <input type="text" id="first-name" placeholder="First name" required pattern="^[A-Za-z]{3,}$" onfocusout="validate(this)">
+                                <i class="fa fa-times-circle error-icon icon-half tooltip">
+                                    <span class="tooltiptext"> Enter 3 or more letters </span>
+                                </i>
+                                <input type="text" id="last-name" placeholder="Last name" required pattern="^[A-Za-z]{3,}$" onfocusout="validate(this)">
+                                <i class="fa fa-times-circle error-icon icon-half tooltip">
+                                    <span class="tooltiptext"> Enter 3 or more letters </span>
+                                </i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa fa-envelope icon"></i>
+                                <input type="email" id="email" placeholder="Email" required onfocus="removeIcon(this)" onfocusout="resetIcon(this); validate(this);">
+                                <i class="fa fa-times-circle error-icon tooltip">
+                                    <span class="tooltiptext">Invalid email format</span>
+                                </i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa fa-phone icon"></i>
+                                <input type="tel" id="phone" placeholder="phone number" required pattern="^(012||011||015||010)\d{8}$" onfocus="removeIcon(this)" onfocusout="resetIcon(this); validate(this);">
+                                <i class="fa fa-times-circle error-icon tooltip">
+                                    <span class="tooltiptext">Inavlid Phone number</span>
+                                </i>
+                            </td>
+                        </tr>
+                        <tr class="half">
+                            <td>
+                                <i class="fa fa-lock icon"></i>
+                                <input type="password" id='password1' required placeholder="Enter Password" onfocus="removeIcon(this)" onfocusout="resetIcon(this); validate(this)">
+                                <i class="fa fa-times-circle error-icon icon-half tooltip">
+                                    <span class="tooltiptext">at least 8 characters, 1 number, 1 upper and 1 lowercase</span>
+                                </i>
+
+                                <input type="password" id='password2' placeholder="Repeat Passowrd" required onfocusout="validate(this)">
+                                <i class="fa fa-times-circle error-icon icon-half tooltip">
+                                    <span class="tooltiptext">password not matched</span>
+                                </i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><button type="submit">Sign up</button></td>
+                        </tr>
+                        <tr>
+                            <td class="form-link">Already a member? <a href="/login.html">signin</a></td>
+                        </tr>
+
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/signup.js"></script>
+</body>
+
+
+</html>

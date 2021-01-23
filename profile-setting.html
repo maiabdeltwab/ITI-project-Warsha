@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="fonts/fontawesome-free/css/all.min.css">
+    <link rel=" stylesheet" href="css/style.css">
+</head>
+
+<body class="setting-page">
+    <div class="d-grid">
+        <div class="side-bar">
+            <h1>Settings</h1>
+            <table>
+                <tr>
+                    <td class="tab" id="tab1">
+                        <i class="fa fa-user"></i>
+                        <button onclick="infoForm()">Personal Info</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tab" id="tab2">
+                        <i class="fa fa-cogs"></i>
+                        <button onclick="preForm()">Preferences</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="info-card info-form">
+            <h1>Edit your information</h1>
+            <form action="/profile-setting.html" onsubmit="return save()">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="username">username</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="username" readonly required pattern="^([a-z0-9]|[-._](?![-._])){3,}$">
+                        </td>
+                    </tr>
+                    <tr class="half">
+                        <td>
+                            <label for="first-name">First name</label>
+                            <label for="last-name">Last name</label>
+                        </td>
+                    </tr>
+                    <tr class="half">
+                        <td>
+                            <input type="text" id="first-name" required pattern="^[A-Za-z]{3,}$" onfocusout="validate(this)">
+                            <i class="fa fa-times-circle error-icon icon-half tooltip">
+                                <span class="tooltiptext"> Enter 3 or more letters </span>
+                            </i>
+                            <input type="text" id="last-name" required pattern="^[A-Za-z]{3,}$" onfocusout="validate(this)">
+                            <i class="fa fa-times-circle error-icon icon-half tooltip">
+                                <span class="tooltiptext"> Enter 3 or more letters </span>
+                            </i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email">Email</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="email" id="email" required onfocusout="validate(this)">
+                            <i class="fa fa-times-circle error-icon tooltip">
+                                <span class="tooltiptext">Invalid email format</span>
+                            </i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="phone">Phone</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="tel" id="phone" required pattern="^(012||011||015||010)\d{8}$" onfocusout="validate(this);">
+                            <i class="fa fa-times-circle error-icon tooltip">
+                                <span class="tooltiptext">Inavlid Phone number</span>
+                            </i>
+                        </td>
+                    </tr>
+                    <tr class="half">
+                        <td>
+                            <label for="pass1">New password</label>
+                            <label for="pass2">Repeat password</label>
+                        </td>
+                    </tr>
+                    <tr class="half">
+                        <td>
+                            <input type="password" id='password1' required onfocusout="validate(this)">
+                            <i class="fa fa-times-circle error-icon icon-half tooltip">
+                                <span class="tooltiptext">password containing at least 8 characters, 1 number, 1 upper and 1 lowercase</span>
+                            </i>
+                            <input type="password" id='password2' required onfocusout="validate(this)">
+                            <i class="fa fa-times-circle error-icon icon-half tooltip">
+                                <span class="tooltiptext">password containing at least 8 characters, 1 number, 1 upper and 1 lowercase</span>
+                            </i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="btn-group">
+                            <button type="button" onclick="getuserInfo()">cancel</button>
+                            <button type="submit">Save</button>
+                        </td> <i class="fa fa-times-circle error-icon icon-half tooltip">
+                            <span class="tooltiptext">password not matched</span>
+                        </i>
+                    </tr>
+
+                </table>
+            </form>
+        </div>
+        <div class="info-card pre-form">
+            <h1>Edit your preference</h1>
+            <form action="/profile-setting.html" onsubmit="return savePref()">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="brand">Car Brand</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="brand">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="model">Car Model</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="model">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="location">Location</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="location" id="location">
+                            <option disabled selected value> -- select your location -- </option>
+                               <option value="Fayoum">Fayoum</option>
+                               <option value="Cairo">Cairo</option>
+                               <option value="Minia">Minia</option>
+                               <option value="Aswan">Aswan</option>
+                           </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="region">Region</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="region" id="region">
+                            <option disabled selected value> -- select your region -- </option>
+                               <option value="etsa">Etsa</option>
+                               <option value="matrtars">Matrtars</option>
+                               <option value="fayoum">Fayoum city</option>
+                           </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="btn-group">
+                            <button type="reset">cancel</button>
+                            <button type="submit">Save</button>
+                        </td>
+                    </tr>
+
+                </table>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/settings.js"></script>
+    <script src="/js/signup.js"></script>
+</body>
+
+</html>

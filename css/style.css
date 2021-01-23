@@ -1,0 +1,621 @@
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: 'Open Sans', sans-serif;
+    }
+    
+    body {
+        background-color: #f4f4f4;
+    }
+    
+    h1,
+    button {
+        font-family: 'Roboto', sans-serif;
+        font-weight: normal;
+    }
+    
+    input:focus,
+    textarea:focus,
+    select:focus,
+    button:focus {
+        outline: none;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #d89216;
+    }
+    
+    a:hover {
+        color: #8C0909
+    }
+    
+    .d-grid {
+        display: grid;
+        padding-top: 80px;
+    }
+    /*********** tooltip ***********/
+    /* Tooltip container */
+    
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        /* If you want dots under the hoverable text */
+    }
+    /* Tooltip text */
+    
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 200px;
+        background-color: #171616b6;
+        color: #f4f4f4;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 5px 0;
+        border-radius: 6px;
+        /* Position the tooltip text - see examples below! */
+        position: absolute;
+        z-index: 1;
+    }
+    /* Show the tooltip text when you mouse over the tooltip container */
+    
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
+    /**********************************
+         Login page style
+***********************************/
+    
+    body.login-page {
+        background-color: #3a3535;
+        background-size: cover;
+    }
+    
+    body.login-page::after {
+        content: "";
+        background: url('/imgs/background.jpg');
+        background-size: cover;
+        opacity: 0.3;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+    }
+    
+    .login-page .d-grid {
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .login-page .form-header {
+        position: relative;
+        height: 50px;
+        padding: 15px;
+        display: block;
+        background-color: #d89216;
+        color: #ffffff;
+        text-align: center;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        box-shadow: 1px 1px 5px #424242a6;
+    }
+    
+    .login-form {
+        position: relative;
+        display: block;
+        margin-top: 0px;
+        padding: 20px 50px 50px 50px;
+        height: 300px;
+        width: 500px;
+        color: #171616;
+        background-color: #f4f4f4;
+        box-shadow: 1px 1px 5px #424242a6;
+        border-bottom-right-radius: 7px;
+        border-bottom-left-radius: 7px;
+    }
+    
+    .login-form input[type='text'],
+    .login-form input[type='password'] {
+        display: inline-block;
+        width: 420px;
+        border: 2px solid #d89216;
+        height: 35px;
+        border-radius: 40px;
+        margin-bottom: 15px;
+        margin-left: 15px;
+        font-size: 14px;
+        padding: 5px;
+        padding-left: 15px;
+    }
+    
+    .login-form input[type='text']:focus,
+    .login-form input[type='password']:focus {
+        border: 2px solid #3a3535;
+        animation: grow2 0.1s linear;
+    }
+    
+    .login-form button,
+    .signup-form button,
+    .info-card button {
+        background-color: #d89216;
+        margin-left: 35px;
+        color: white;
+        font-size: 20px;
+        width: 440px;
+        height: 50px;
+        border: none;
+        border-radius: 40px;
+    }
+    
+    .login-form button:hover,
+    .signup-form button:hover {
+        background-color: #faac24;
+    }
+    
+    .login-form button:active,
+    .signup-form button:active,
+    .info-card button:active {
+        animation: grow 0.5s linear;
+    }
+    
+    .login-form i {
+        font-size: 18px;
+        color: #d89216;
+    }
+    
+    .login-form i:hover {
+        color: #8C0909;
+    }
+    
+    .login-form .invalid-login {
+        visibility: hidden;
+        padding-bottom: 10px;
+        text-align: justify;
+        color: #8c0909c9;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    
+    .form-link {
+        display: block;
+        padding-left: 10px;
+        margin-top: 35px;
+        text-align: center;
+    }
+    
+    .login-form .form-check {
+        padding-left: 40px;
+        padding-bottom: 15px;
+    }
+    
+    @keyframes grow {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1.5);
+        }
+    }
+    
+    @keyframes grow2 {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1.05);
+        }
+    }
+    /**********************************
+        Sign up page style
+***********************************/
+    
+    .signup-form .d-grid {
+        overflow: visible;
+        grid-template-columns: 40% 60%;
+        grid-template-areas: photo form;
+    }
+    
+    .signup-img {
+        grid-area: photo;
+        justify-self: start;
+        margin-left: -230px;
+        margin-top: 50px;
+    }
+    
+    .signup-page .form-header {
+        display: inline-block;
+        position: relative;
+        margin-top: -20px;
+        padding-top: 10px;
+        padding-left: 50px;
+        width: 200px;
+        height: 70px;
+        background-color: #d89216;
+        color: #3a3535;
+        font-size: 45px;
+        border-bottom-right-radius: 50px;
+        border-top-left-radius: 7px;
+        align-self: center;
+        z-index: 1;
+    }
+    
+    .signup-page .left-container {
+        position: relative;
+        justify-self: end;
+        grid-area: form;
+    }
+    
+    .signup-form {
+        position: relative;
+        display: block;
+        margin-right: 170px;
+        margin-top: -80px;
+        padding: 140px 0px 50px 50px;
+        height: 420px;
+        width: 520px;
+        color: #ffffff;
+        background-color: #3a3535;
+        box-shadow: 1px 1px 5px #424242a6;
+        border-radius: 7px;
+    }
+    
+    .signup-form i {
+        position: absolute;
+    }
+    
+    .icon {
+        padding: 10px;
+        min-width: 40px;
+        color: #f4f4f4;
+    }
+    
+    .error-icon {
+        display: none;
+        color: #e43b3b;
+        padding-top: 10px;
+        margin-left: -20px;
+    }
+    
+    .icon-half {
+        margin-left: -60px;
+    }
+    
+    .signup-form input[type=email],
+    .signup-form input[type=password],
+    .signup-form input[type=text],
+    .signup-form input[type=tel] {
+        display: inline-block;
+        box-sizing: border-box;
+        height: 34px;
+        width: 465px;
+        margin-bottom: 15px;
+        padding-bottom: 5px;
+        padding-left: 35px;
+        border: none;
+        border-bottom: 1px solid #d89216;
+        background-color: transparent;
+        color: white;
+        font-size: 18px;
+    }
+    
+    .signup-form input[type=email]:active,
+    .signup-form input[type=password]:active,
+    .signup-form input[type=text]:active,
+    .signup-form input[type=tel]:active {
+        border-bottom: 1px solid #8C0909;
+    }
+    
+    .signup-form input[type=email]:focus,
+    .signup-form input[type=password]:focus,
+    .signup-form input[type=text]:focus,
+    .signup-form input[type=tel]:focus {
+        border-bottom: 1px solid #f4f4f4;
+        padding-left: 7px;
+    }
+    
+    .signup-form .half input {
+        margin-right: 40px;
+        padding-left: 7px;
+        width: 210px;
+    }
+    
+    .signup-form #password1 {
+        padding-left: 35px;
+    }
+    
+    .signup-form #password1:focus {
+        padding-left: 7px;
+    }
+    
+    .signup-form button {
+        margin-top: 20px;
+        width: 477px;
+        margin-left: -1px;
+    }
+    
+    .signup-form a:hover {
+        color: #f4f4f4;
+    }
+    
+    .signup-form .form-link {
+        margin-left: -25px;
+    }
+    /**********************************
+        profile settings page style
+     
+    ***********************************/
+    
+    body.setting-page {
+        height: 100vh;
+        background-image: url('/imgs/car1.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-y: 300px;
+        background-position-x: right;
+        background-blend-mode: luminosity;
+    }
+    
+    .setting-page .d-grid {
+        overflow: hidden;
+        align-self: center;
+        grid-template-columns: 23% 70%;
+        grid-template-areas: 'bar form';
+        height: 600px;
+        margin-top: -80px;
+        padding-top: 120px;
+        padding-left: 200px;
+    }
+    
+    .side-bar {
+        padding: 50px 0px 0px 70px;
+        border-right: 2px solid #b6abab;
+    }
+    
+    .side-bar .tab {
+        display: block;
+        padding-left: 20px;
+        margin-bottom: 30px;
+        width: 205px;
+    }
+    
+    .side-bar .tab:hover {
+        background-color: #ffffffa1;
+    }
+    
+    .side-bar button {
+        display: inline-block;
+        grid-area: bar;
+        width: 150px;
+        height: 50px;
+        color: #3a3535;
+        background: none;
+        text-align: left;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    
+    .side-bar button:hover {
+        color: #d89216;
+    }
+    
+    .side-bar i {
+        font-size: 25px;
+        color: #d89216;
+    }
+    
+    .side-bar h1 {
+        color: #3a3535;
+        margin-bottom: 50px;
+        margin-left: 23px;
+    }
+    
+    .info-card {
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+        color: #3a3535;
+        background-color: transparent;
+    }
+    
+    .setting-page .info-card {
+        grid-area: form;
+        margin-left: 100px;
+        padding: 50px 0px 50px -20px;
+        height: 90vh;
+        width: 700px;
+    }
+    
+    .info-card h1 {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    
+    .info-card input[type=email],
+    .info-card input[type=password],
+    .info-card input[type=text],
+    .info-card input[type=tel],
+    .info-card select {
+        display: inline-block;
+        box-sizing: border-box;
+        height: 34px;
+        width: 465px;
+        margin-bottom: 15px;
+        padding: 5px 0px 5px 7px;
+        border: none;
+        border: 1px solid #3a3535;
+        border-radius: 5px;
+        background-color: transparent;
+        color: #171616;
+        font-size: 18px;
+    }
+    
+    .info-card select {
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+    
+    .info-card input[type=email]:active,
+    .info-card input[type=password]:active,
+    .info-card input[type=text]:active,
+    .info-card input[type=tel]:active,
+    .info-card select:active {
+        border: 2px solid #d89216;
+    }
+    
+    .info-card input[type=email]:focus,
+    .info-card input[type=password]:focus,
+    .info-card input[type=text]:focus,
+    .info-card input[type=tel]:focus,
+    .info-card select:focus {
+        border: 2px solid #d89216;
+    }
+    
+    .info-card input[readonly] {
+        background-color: #d1d0d0;
+        color: #3a3535;
+    }
+    
+    .info-card .half input {
+        margin-right: 40px;
+        padding-left: 7px;
+        width: 210px;
+    }
+    
+    .info-card label {
+        color: #8C0909;
+    }
+    
+    label[for=pass2] {
+        margin-left: 140px;
+    }
+    
+    label[for=last-name] {
+        margin-left: 170px;
+    }
+    
+    .btn-group {
+        display: block;
+        margin-left: 250px;
+    }
+    
+    .info-card button {
+        margin-top: 20px;
+        width: 110px;
+        height: 40px;
+        margin-left: -1px;
+    }
+    
+    .info-card button:hover {
+        background-color: #faac24;
+    }
+    
+    .info-card button[type=reset] {
+        background-color: #f4f4f4;
+        border: 2px solid #d89216;
+        color: #d89216;
+    }
+    
+    .info-card button[type=reset]:hover {
+        background-color: #d89216;
+        border: 2px solid #8C0909;
+        color: #f4f4f4;
+    }
+    
+    .info-card.pre-form {
+        display: none;
+        z-index: 0;
+    }
+    
+    .info-card.info-form {
+        display: block;
+        z-index: 1;
+    }
+    
+    .info-card .error-icon {
+        position: absolute;
+        margin-left: -30px;
+    }
+    
+    .info-card .icon-half {
+        margin-left: -70px;
+    }
+    /********************************
+
+     profile page style
+
+    *********************************/
+    
+    .profile-page .profile-photo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-right: 15px;
+        grid-area: card;
+    }
+    
+    .profile-page .d-grid {
+        overflow: hidden;
+        align-self: center;
+        grid-template-rows: 24% 16% 60%;
+        grid-template-areas: 'card' 'tabs' 'info';
+    }
+    
+    .profile-card {
+        display: flex;
+        width: 700px;
+        height: 200px;
+        margin-left: 70px;
+        padding-left: 10px;
+        background-color: #ffffff;
+        border-radius: 45px;
+        align-items: center;
+    }
+    
+    .h-tabs {
+        display: block;
+        grid-area: tabs;
+        padding-left: 150px;
+    }
+    
+    .h-tabs.side-bar {
+        border: none;
+    }
+    
+    .h-tabs .tab {
+        display: inline-block;
+    }
+    
+    .profile-page .info {
+        display: flex;
+        grid-area: info;
+        height: 500px;
+    }
+    
+    .profile-page .info-card table {
+        font-size: 18px;
+        text-align: left;
+        border-spacing: 150px 10px;
+    }
+    
+    .profile-page .info-card table th {
+        color: #8C0909;
+    }
+    
+    .profile-page .info-card.info-form,
+    .profile-page .info-card.pre-form {
+        padding: 0px 25px;
+    }
+    
+    .profile-card a {
+        color: #3a3535;
+    }
+    
+    .profile-card a:hover {
+        color: #d89216;
+    }
