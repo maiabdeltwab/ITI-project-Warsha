@@ -36,6 +36,7 @@ function validateForm() {
     } else {
         var invalidText = document.querySelector('.invalid-login');
         invalidText.style.visibility = 'visible';
+        localStorage.login = false;
         return false;
     }
 }
@@ -44,7 +45,7 @@ function validateForm() {
 //save user input if 'remember me' be chosen
 function saveLogin() {
     var remeberCheck = document.getElementById('remeber-me');
-
+    localStorage.login = true;
     if (remeberCheck.checked) {
         localStorage.saved = true;
     } else {

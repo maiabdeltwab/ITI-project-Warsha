@@ -1,0 +1,119 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Work Shops</title>
+    <link rel="stylesheet" type="text/css" href="css/WorkShops&emerganct.css">
+    <script type="text/javascript" src="Data.json"></script>
+</head>
+
+<header>
+    <div class="header">
+        <div class="header--logo">
+            <img src="imgs/logo.jpg" />
+        </div>
+        <ul class="header--menu--items">
+            <li class="header--menu--item"><a href="index.html">Home</a></li>
+            <li class="header--menu--item"><a href="#service">Service</a></li>
+            <li class="header--menu--item"><a href="/workShops.html">Workshops</a></li>
+            <li class="header--menu--item"><a href="/Error.html">Contact</a></li>
+            <li class="header--menu--item">
+                <i class="fas fa-user-circle"></i> <a href="/login.html" id='user'><span id="x">Sign in</span></a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<body>
+    <table id='table'>
+        <thead>
+            <form action="#">
+                <th>
+                    <div class="box">
+                        <select id="select-box1" required onchange="filterCity()">  
+                             <option value="all" disabled selected>Select Your city</option>
+                             <option value="fayoum">Fayoum</option>
+                             <option value="minya">Minia</option>
+                             <option value="giza">Giza</option>
+                             <option value="cairo">Cairo</option>
+                        </select>
+                    </div>
+                </th>
+
+                <th>
+                    <div class="box">
+                        <select id="select-box2" required onchange="filterLoction()"> 
+                              <option value="all" disabled selected>Select Your Location</option>
+                              <option value="itsa">Itsa</option>    
+                              <option value="fayoum">Fayoum</option>          
+                              <option value="damares">Damares</option>
+                              <option value="minya">Minya</option>
+                              <option value="giza">Giza</option>
+                              <option value="maadi">Maadi</option>
+                              <option value="mohandesen">Mohandesen</option>
+                        </select>
+                    </div>
+                </th>
+            </form>
+        </thead>
+        <tbody id="TableBody">
+
+        </tbody>
+    </table>
+
+
+    <footer>
+        <div class="footer--info">
+            <small>
+                The First Web Site That Providing This Service in Egypt,which that desgin and devolping by iti students
+            </small>
+        </div>
+        <div class="footer--branch">
+            <p>
+                Cairo: Nasr city,El-Hey El-Asher
+            </p>
+            <p>
+                Tel:01140293248,0224117121
+            </p>
+            <p>
+                Fayoum: Matartars village, Senouras
+            </p>
+            <p>
+                Tel:01140293248,0224117121
+            </p>
+
+        </div>
+        <div class="footer-menu">
+            <ul class="footer--menu--items">
+                <li class="footer--menu--item"><a href="#">Home</a></li>
+                <li class="footer--menu--item"><a href="#">Service</a></li>
+                <li class="footer--menu--item"><a href="#">About us</a></li>
+                <li class="footer--menu--item"><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+    <div class="copyright">
+        <h4>
+            copyright To Youma Hosny , Mai Abd-Eltwab , Ebram Samir , Mohamed El-Mostafa
+        </h4>
+    </div>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/workShops.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            editLinks();
+        });
+    </script>
+
+    <script>
+        var login = localStorage.login;
+        if (login != "false") {
+            document.getElementById('user').href = '/profile.html';
+            document.getElementById('x').innerText = localStorage.username;
+        }
+    </script>
+</body>
+
+</html>

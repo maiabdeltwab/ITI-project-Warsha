@@ -1,8 +1,11 @@
-document.querySelector('#username').innerHTML = 'maiabdeltwab';
-document.querySelector('#first-name').innerHTML = 'Mai';
-document.querySelector('#last-name').innerHTML = 'Abd Eltwab';
-document.querySelector('#email').innerHTML = 'maiabeltwab117@gmail.com'
-document.querySelector('#phone').innerHTML = '01014226224';
+document.querySelector('#header-username').innerHTML = localStorage.getItem('username');
+document.querySelector('#header-name').innerHTML = localStorage.getItem('firstName') + ' ' + localStorage.getItem('lastName');
+document.querySelector('#header-phone').innerHTML = localStorage.getItem('phone');
+document.querySelector('#username').innerHTML = localStorage.getItem('username');
+document.querySelector('#first-name').innerHTML = localStorage.getItem('firstName');
+document.querySelector('#last-name').innerHTML = localStorage.getItem('lastName');
+document.querySelector('#email').innerHTML = localStorage.getItem('email');
+document.querySelector('#phone').innerHTML = localStorage.getItem('phone');
 
 
 var info = document.querySelector(".info-card.info-form");

@@ -6,8 +6,16 @@
         font-family: 'Open Sans', sans-serif;
     }
     
+    html {
+        scroll-behavior: smooth;
+    }
+    
     body {
         background-color: #f4f4f4;
+    }
+    
+    img {
+        object-fit: cover;
     }
     
     h1,
@@ -26,6 +34,7 @@
     a {
         text-decoration: none;
         color: #d89216;
+        cursor: pointer;
     }
     
     a:hover {
@@ -64,6 +73,343 @@
     
     .tooltip:hover .tooltiptext {
         visibility: visible;
+    }
+    /***********************************
+          Main Page style
+    ************************************/
+    
+    .test {
+        height: 100vh;
+    }
+    
+    .header {
+        width: 100%;
+        height: 73px;
+        display: flex;
+        background-color: #3a3535;
+        position: fixed;
+        z-index: 1001;
+    }
+    
+    .header--logo {
+        flex: 2;
+    }
+    
+    .header--logo img {
+        padding: 5px 20px;
+    }
+    
+    .header--menu--items {
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        flex: 2;
+    }
+    
+    .header--menu--item {
+        padding-top: 20px;
+        font-size: large;
+        font-weight: bold;
+    }
+    
+    .header--menu--item i {
+        margin-right: 15px;
+        color: white;
+    }
+    
+    .header--menu--item a {
+        color: white;
+    }
+    
+    .main {
+        position: relative;
+        background: url('/imgs/download.jpg') no-repeat center;
+        height: 98vh;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .main-one {
+        background-image: url('/imgs/wensh.jpg');
+    }
+    
+    .main-two {
+        background-image: url('/imgs/maxresdefault.jpg');
+    }
+    
+    .main::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to right, #000, rgba(255, 255, 255, 0.315));
+    }
+    
+    .main-3 {
+        position: absolute;
+        z-index: 1000;
+        width: 50%;
+        margin-left: 100px;
+    }
+    
+    .main-3 h1 {
+        color: white;
+        font-size: 3rem;
+    }
+    
+    #service {
+        /* text-align: center; */
+        font-size: 2.3rem;
+        height: 100vh;
+        font-size: 1.5rem;
+    }
+    
+    .service--emergancy {
+        width: 100%;
+        height: 93vh;
+        background-color: #d89216;
+        clip-path: polygon(0 0, 25% 0, 75% 100%, 0 100%);
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+    
+    .service--emergancy--items {
+        list-style: none;
+        text-align: center;
+        margin-left: 30px;
+    }
+    
+    .repair {
+        position: absolute;
+        top: 5%;
+        left: 55%;
+        /* color:#d89216 ; */
+    }
+    
+    .service--emergancy--item {
+        padding: 5px;
+    }
+    
+    .service--emergancy--item i {
+        margin-right: 7px;
+    }
+    
+    .btn-danger {
+        background-color: #8C0909;
+    }
+    
+    .toprated {
+        margin-top: 58px;
+        text-align: center;
+        width: 100%;
+        height: 90vh;
+        position: relative;
+        background: url('/imgs/download.jpg') no-repeat center;
+        background-size: cover;
+        z-index: 1;
+    }
+    
+    .toprated::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: linear-gradient(to right, #000, rgba(255, 255, 255, 0.315));
+        background-size: cover;
+    }
+    
+    .toprated header {
+        margin: 20px;
+        font-size: 2.5rem;
+        color: #f4f4f4;
+    }
+    
+    .test2 {
+        padding: 0 10px;
+    }
+    
+    .card {
+        text-align: center;
+        width: 350px;
+        border: 2px black solid;
+        border-radius: 7px;
+        background-color: #f4f4f4;
+    }
+    
+    .card--img {
+        margin: 10px auto;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .card h1 {
+        margin: 0;
+    }
+    
+    .card--img img {
+        width: 135px;
+        height: 135px;
+        border-radius: 50%;
+    }
+    
+    .card--info--item {
+        padding: 6px;
+        font-size: 1.5rem;
+    }
+    
+    .card--info--item i {
+        margin-right: 15px;
+        font-size: 1rem;
+        color: #8c0909;
+    }
+    
+    .checked {
+        color: orange;
+    }
+    
+    .card--info {
+        list-style: none;
+        font-size: 1.5rem;
+    }
+    
+    .slick-next,
+    .slick-arrow {
+        display: none !important;
+    }
+    
+    .btn {
+        background-color: #d89216;
+        margin: 20px;
+        color: white;
+        font-size: 20px;
+        padding: 20px 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 40px;
+    }
+    
+    .btn:hover {
+        background-color: #faac24;
+    }
+    
+    .btn:active,
+    .btn:focus {
+        animation: grow 0.5s linear;
+        outline: none;
+    }
+    
+    footer {
+        margin-top: 10px;
+        background-color: #3a3535;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        color: #f4f4f4;
+    }
+    
+    .footer--info {
+        font-size: 1.3rem;
+        flex: 2;
+        padding: 30px;
+    }
+    
+    .footer--branch {
+        flex: 3;
+    }
+    
+    .footer--branch p {
+        margin: 20px;
+        font-size: 1.2rem;
+    }
+    
+    .footer-menu {
+        flex: 1;
+    }
+    
+    .footer--menu--items {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 30px;
+        font-size: 1.3rem;
+    }
+    
+    .footer--menu--item {
+        padding: 7px;
+    }
+    
+    .copyright {
+        background-color: #3a3535;
+        color: #f4f4f4;
+        border-top: 2px solid white;
+        text-align: center;
+    }
+    
+    .copyright h4 {
+        padding: 10px;
+    }
+    
+    .display {
+        position: absolute;
+        z-index: 1000;
+        height: 100vh;
+        width: 100vw;
+        display: none;
+    }
+    
+    .box {
+        display: inline;
+        font: 400 13.3333px Arial;
+    }
+    
+    .box select {
+        background-color: #d89216;
+        color: white;
+        border-radius: 40px;
+        padding: 10px;
+        width: 120px;
+        border: none;
+        font-size: 15px;
+        -webkit-appearance: button;
+        appearance: button;
+        outline: none;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        text-align: center;
+    }
+    
+    .box::before {
+        font-family: FontAwesome;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 20%;
+        height: 100%;
+        text-align: center;
+        font-size: 28px;
+        line-height: 45px;
+        pointer-events: none;
+    }
+    
+    .box:hover option {
+        color: rgba(255, 255, 255, 0.6);
+        background-color: #faac24;
+    }
+    
+    .box select option {
+        padding: 30px;
     }
     /**********************************
          Login page style
@@ -562,6 +908,7 @@
     .profile-page .d-grid {
         overflow: hidden;
         align-self: center;
+        padding-top: 130px;
         grid-template-rows: 24% 16% 60%;
         grid-template-areas: 'card' 'tabs' 'info';
     }
@@ -571,7 +918,7 @@
         width: 700px;
         height: 200px;
         margin-left: 70px;
-        padding-left: 10px;
+        padding-left: 50px;
         background-color: #ffffff;
         border-radius: 45px;
         align-items: center;
@@ -618,4 +965,14 @@
     
     .profile-card a:hover {
         color: #d89216;
+    }
+    
+    #setting-link {
+        margin-left: 200px;
+        background-color: #d89216;
+        padding: 10px;
+        border-radius: 35px;
+        color: white;
+        cursor: pointer;
+        font-size: 18px;
     }

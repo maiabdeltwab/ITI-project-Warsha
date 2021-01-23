@@ -1,0 +1,46 @@
+img {
+    margin: auto;
+    display: block;
+    width: 150;
+}
+
+#error-body a {
+    padding: 15;
+    border-radius: 30%;
+    background-color: white;
+    color: #d89216;
+    /* background-color: #8c0909; */
+    /* color: white; */
+    width: 7.5%;
+    height: 7%;
+    border: 1px solid black;
+}
+
+#error-body a:hover {
+    cursor: pointer;
+    font-size: medium;
+    /* background-color: #8c0909; */
+    width: 8%;
+    height: 7.5%;
+}
+
+p {
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+span {
+    color: #d89216;
+    /* color: #8c0909; */
+}
+
+#div1 {
+    margin-right: 100px;
+    width: 50%;
+    display: inline-block;
+}
+
+#error-body {
+    padding-top: 150px;
+    height: 600px;
+}

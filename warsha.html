@@ -1,0 +1,282 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>warsha</title>
+    <link rel="stylesheet" href="Css/warsha.css">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="header--logo">
+                <img src="imgs/logo.jpg" />
+            </div>
+            <ul class="header--menu--items">
+                <li class="header--menu--item"><a href="index.html">Home</a></li>
+                <li class="header--menu--item"><a href="#service">Service</a></li>
+                <li class="header--menu--item"><a href="/workShops.html">Workshops</a></li>
+                <li class="header--menu--item"><a href="/Error.html">Contact</a></li>
+                <li class="header--menu--item">
+                    <i class="fas fa-user-circle"></i> <a href="/login.html" id='user'><span id="x">Sign in</span></a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="card">
+        <div class="logo">
+        </div>
+        <div class="card-text">
+            <div class="portada">
+
+            </div>
+            <div class="title-total">
+                <div class="about">
+                    <span class="address">WorkShop Name : </span> <span id="workshopName" class="info"></span>
+                    <br>
+                    <br>
+                    <span class="address">Mobile Phone : </span> <span id="workshopPhone" class="info"></span>
+                    <br>
+                    <br>
+
+
+                    <span class="address">WorkShop Address : </span><span id="workshopAddress" class="info"></span>
+                    <br>
+                    <br>
+                    <span class="address">Work Times : </span><span class="info">From 10 Am To 10 Pm</span>
+                    <br>
+                    <br>
+                    <span class="address">Rate : </span><span id="workshopRate" class="info"></span>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <br>
+    <br>
+
+
+    <!-- <div class="flex-container">
+        <div id="imgDiv"><img src="shop.jfif" width="300" height="300"></div>
+        <div id="shopInfo">
+            <span style="color: black;">WorkShop Name : </span> <span style="margin-left: 10px;">Engine and Oil</span>
+            <br>
+            <br>
+            <span style="color: black;">WorkShop Address : </span><span style="margin-left: 10px;">England ,
+                London</span>
+            <br>
+            <br>
+            <span style="color: black;">Work Times : </span><span style="margin-left: 10px;">From 10 Am To 10 Pm</span>
+            <br>
+            <br>
+            <span style="color: black;">Rate : </span><span style="margin-left: 10px;">4.5 / 5</span>
+
+        </div>
+    </div> -->
+
+
+    <div class="btnDiv">
+        <button id="ServicetButton"> Price list</button>
+        <svg height="400" width="120">
+            <line x1="0" y1="101" x2="110" y2="0" style="stroke: #3A3535; stroke-width:1" />
+        </svg>
+        <button id="commentButton"> Comments</button>
+        <br>
+
+    </div>
+    <div>
+
+
+        <table id="serviceTable">
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>price</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>General Maintenance Services</td>
+                    <td style=" color: #8C0909; ">100$</td>
+                </tr>
+
+                <tr>
+                    <td>Change Oil</td>
+                    <td style=" color: #8C0909;;">100$</td>
+                </tr>
+                <tr>
+                    <td>Brake Check and Repair</td>
+                    <td style=" color: #8C0909;">100$</td>
+                </tr>
+                <tr>
+                    <td>Tire Inspection and Replacement</td>
+                    <td style=" color: #8C0909;">200$</td>
+                </tr>
+                <tr>
+                    <td>Main Engine Repair</td>
+                    <td style=" color: #8C0909;;">300$</td>
+                </tr>
+                <tr>
+                    <td>Vehicle Inspection</td>
+                    <td style=" color: #8C0909;">400$</td>
+                </tr>
+                <tr>
+                    <td>Get Rid of Traces of Dings and Paint</td>
+                    <td style=" color: #8C0909;">1000$</td>
+                </tr>
+
+            </tbody>
+        </table>
+        <div id="commentsbox" style="display: flex;">
+            <div style="margin-right:100px; width: 50%; display: inline-block;" id="div1">
+                <span class="name">Abram Samir</span>
+                <p>They are very collaborator and help me in my Emergency. It is a good WorkShop they came on time</p>
+                <br>
+
+                <span class="name">Mai Abd Eltwab</span>
+                <p>They are very collaborator and help me in my Emergency</p>
+                <br>
+
+                <span class="name">Mohammed El-Mostafa</span>
+                <p>They aren't greedy they doesn't take any taxes from me</p>
+                <br>
+
+                <span class="name">Yomna Hosni</span>
+                <p>They are very collaborator and help me in my Emergency. They aren't greedy they doesn't take any taxes from me</p>
+                <br>
+                <span class="name">Ahmed Mohammed</span>
+                <p>It is a good WorkShop they came on time</p>
+                <br>
+
+                <!-- <span></span>
+                <p id="para"></p> -->
+            </div>
+            <div class="writeComment">
+                <br>
+                <br>
+
+                <p>Write Your Comment</p>
+                <!-- <br> -->
+                <textarea id="txtArea"></textarea>
+
+
+                <br>
+                <br>
+                <button onclick="post()" class="postbtn">Post</button>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <footer>
+            <div class="footer--info">
+                <p>
+                    The First Web Site That Providing This Service in Egypt,which that desgin and devolping by iti students
+                </p>
+            </div>
+            <div class="footer--branch">
+                <p>
+                    Cairo: Nasr city,El-Hey El-Asher
+                </p>
+                <p>
+                    Tel:01140293248,0224117121
+                </p>
+                <p>
+                    Fayoum: Matartars village, Senouras
+                </p>
+                <p>
+                    Tel:01140293248,0224117121
+                </p>
+
+            </div>
+            <div class="footer-menu">
+                <ul class="footer--menu--items">
+                    <li class="footer--menu--item"><a href="#">Home</a></li>
+                    <li class="footer--menu--item"><a href="#">Service</a></li>
+                    <li class="footer--menu--item"><a href="#">About us</a></li>
+                    <li class="footer--menu--item"><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </footer>
+        <div class="copyright">
+            <h4>
+                copyright To Youma Hosny, Mai Abd-Eltwab, Ebram Samir, Mohamed El-Mostafa
+            </h4>
+        </div>
+
+        <!-- <table id="commentsbox">
+            <thead>
+                <tr>
+                    <th>Customer</th>
+                    <th>Comment</th>
+
+                </tr>
+            </thead>
+            <tbody>
+               
+
+                <tr>
+                    <td>Abram Samir</td>
+                    <td>They are very collaborator and help me in my Emergency.It is a good WorkShop they came on time</td>
+                </tr>
+                <tr>
+                    <td>Mai Abd Eltwab</td>
+                    <td>They are very collaborator and help me in my Emergency</td>
+                </tr>
+                <tr>
+                    <td>Mohammed El-Mostafa</td>
+                    <td>They aren't greedy they doesn't take any taxes from me</td>
+                </tr>
+                <tr>
+                    <td>Yomna Hosni</td>
+                    <td>They are very collaborator and help me in my Emergency.They aren't greedy they doesn't take any taxes from me</td>
+                </tr>
+                <tr>
+                    <td>Ahmed Mohammed </td>
+                    <td>It is a good WorkShop they came on time</td>
+                </tr>
+                
+            </tbody>
+        </table> -->
+    </div>
+    <script src="Js/warsha.js"></script>
+    <script src="Js/signup.js"></script>
+
+    <!-- <script type="text/javascript" src="Data.json"></script> -->
+
+    <script>
+        // var obj=
+        // {
+        //     "Name":"abram",
+        //     "Age":document.getElementById("txtArea").value
+
+        // }
+    </script>
+
+    <script>
+        var login = localStorage.login;
+        if (login != "false") {
+            document.getElementById('user').href = '/profile.html';
+            document.getElementById('x').innerText = localStorage.username;
+        }
+    </script>
+
+</body>
+
+</html>

@@ -21,6 +21,7 @@ function validate(input) {
     }
 
     var errorIcon = input.nextSibling.nextElementSibling;
+    console.log(errorIcon)
 
     if (!pattern.test(input.value)) {
         input.style.borderColor = "#e43b3b";
@@ -51,18 +52,45 @@ function save() {
     var form = document.forms[0];
     console.log('hiiii here!')
 
-    for (let i = 0; i < (form.length - 1); i++) {
+    for (let i = 1; i < (form.length - 1); i++) {
         if (!validate(form[i])) {
             return false;
         }
     }
 
-    localStorage.setItem('username', form.username.value);
-    localStorage.setItem('firstName', form['first-name'].value);
-    localStorage.setItem('lastName', form['last-name'].value);
-    localStorage.setItem('email', form.email.value);
-    localStorage.setItem('phone', form.phone.value);
-    localStorage.setItem('password', form.password1.value);
+    localStorage.username = form.username.value;
+    localStorage.firstName = form['first-name'].value;
+    localStorage.lastName = form['last-name'].value;
+    localStorage.email = form.email.value;
+    localStorage.phone = form.phone.value;
+    localStorage.password = form.password1.value;
 
     return true;
+}
+
+
+
+var name = localStorage.getItem('firstName') + " " + localStorage.getItem('lastName');
+
+function post() {
+
+    var para = document.createElement("p");
+    var sp = document.createElement("span");
+    var x = document.getElementById("txtArea").value;
+
+    var node = document.createTextNode(x);
+    var node2 = document.createTextNode(name);
+
+
+    var a = sp.appendChild(node2);
+    var b = para.appendChild(node);
+
+    var element = document.getElementById("div1");
+    var y = element.appendChild(sp);
+    var z = element.appendChild(para);
+
+    document.getElementById("txtArea").value = "";
+
+
+
 }

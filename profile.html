@@ -9,10 +9,26 @@
     <link rel=" stylesheet" href="css/style.css">
 </head>
 
+<header>
+    <div class="header">
+        <div class="header--logo">
+            <img src="imgs/logo.jpg" />
+        </div>
+        <ul class="header--menu--items">
+            <li class="header--menu--item"><a href="index.html">Home</a></li>
+            <li class="header--menu--item"><a href="#service">Service</a></li>
+            <li class="header--menu--item"><a href="/workShops.html">Workshops</a></li>
+            <li class="header--menu--item"><a href="/Error.html">Contact</a></li>
+            <li class="header--menu--item">
+                <i class="fas fa-user-circle"></i> <a href="/login.html" id='user'><span id="x">Sign in</span></a>
+            </li>
+        </ul>
+    </div>
+</header>
+
 <body class="profile-page">
+
     <div class="d-grid">
-
-
         <div class="profile-card">
             <table>
                 <tr>
@@ -21,15 +37,19 @@
                     </td>
                     <td>
                         <a href="/profile.html">
-                            <h1>Mai Abd-Eltwab</h1>
+                            <h1 id='header-name'></h1>
                         </a>
 
-                        <h4>@mai-abdeltwab</h4>
+                        <h4>@ <span id='header-username'></span> </h4>
                         <br>
-                        <p><span>Phone:</span> +2010-142-2624</p>
+                        <p><span>Phone: +2</span> <span id='header-phone'></span></p>
                     </td>
                 </tr>
             </table>
+
+            <div>
+                <a href="/profile-setting.html" id="setting-link"> Settings </a>
+            </div>
         </div>
 
         <table>
@@ -111,7 +131,49 @@
         </table>
     </div>
 
+    <footer>
+        <div class="footer--info">
+            <small>
+                The First Web Site That Providing This Service in Egypt,which that desgin and devolping by iti students
+            </small>
+        </div>
+        <div class="footer--branch">
+            <p>
+                Cairo: Nasr city,El-Hey El-Asher
+            </p>
+            <p>
+                Tel:01140293248,0224117121
+            </p>
+            <p>
+                Fayoum: Matartars village, Senouras
+            </p>
+            <p>
+                Tel:01140293248,0224117121
+            </p>
+
+        </div>
+        <div class="footer-menu">
+            <ul class="footer--menu--items">
+                <li class="footer--menu--item"><a href="#">Home</a></li>
+                <li class="footer--menu--item"><a href="#">Service</a></li>
+                <li class="footer--menu--item"><a href="#">About us</a></li>
+                <li class="footer--menu--item"><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+    <div class="copyright">
+        <h4>
+            copyright To Youma Hosny , Mai Abd-Eltwab , Ebram Samir , Mohamed El-Mostafa
+        </h4>
+    </div>
     <script src="/js/profile.js"></script>
+    <script>
+        var login = localStorage.login;
+        if (login != "false") {
+            document.getElementById('user').href = '/profile.html';
+            document.getElementById('x').innerText = localStorage.username;
+        }
+    </script>
 </body>
 
 </html>

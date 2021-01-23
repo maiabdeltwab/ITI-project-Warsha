@@ -1,0 +1,87 @@
+[{
+        "id": 1,
+        "city": "giza",
+        "location": "giza",
+        "name": "The local work shop",
+        "phone-number": "010234938532",
+        "rate": 4,
+        "address": "Egpy - Giza , Mesala street behind Rosana Resturant Below ElSeha Clinic",
+        "image": "url(/imgs/workShop1.jpg)",
+        "icon": "url(/imgs/workShop2.jpg)"
+    }, {
+        "id": 2,
+        "city": "giza",
+        "location": "giza",
+        "name": "The Race work shop",
+        "phone-number": "010555638510",
+        "rate": 2,
+        "address": "Egpy - Giza , family street after zad bank the third house at the left side ",
+        "image": "url(/imgs/workShop4.jpg)",
+        "icon": "url(/imgs/workShop2.jpg)"
+    }, {
+        "id": 3,
+        "city": "cairo",
+        "location": "maadi",
+        "name": "The Boss work shop",
+        "phone-number": "010234938532",
+        "rate": 2,
+        "address": "Egpy - Maadi ,family street after zad bank the third house at the left side ",
+        "image": "url(/imgs/workShop3.jpg)",
+        "icon": "url(/imgs/workShop1.jpg)"
+    }, {
+        "id": 4,
+        "city": "cairo",
+        "location": "mohandesen",
+        "name": "The Race work shop",
+        "phone-number": "010555638510",
+        "rate": 2,
+        "address": "Egpy - Mohandesen ,  Mesala street behind Rosana Resturant Below ElSeha Clinic ",
+        "image": "url(/imgs/workShop5.jpg)",
+        "icon": "url(/imgs/workShop3.jpg)"
+    },
+
+    {
+        "id": 5,
+        "city": "fayoum",
+        "location": "fayoum",
+        "name": "The local work shop",
+        "phone-number": "010234938532",
+        "rate": 4,
+        "address": "Egpy - ElFayoum , Mesala street behind Rosana Resturant Below ElSeha Clinic",
+        "image": "url(/imgs/workShop3.jpg)",
+        "icon": "url(/imgs/workShop2.jpg)"
+    }, {
+        "id": 6,
+        "city": "fayoum",
+        "location": "itsa",
+        "name": "The Race work shop",
+        "phone-number": "010555638510",
+        "rate": 2,
+        "address": "Egpy - Itsa , family street after zad bank the third house at the left side ",
+        "image": "url(/imgs/workShop1.jpg)",
+        "icon": "url(/imgs/workShop5.jpg)"
+    },
+
+    {
+        "id": 7,
+        "city": "minya",
+        "location": "damares",
+        "name": "Master work shop",
+        "phone-number": "010938532145",
+        "rate": 2,
+        "address": "Egpy - Minya ,damares street after zad bank the third house at the left side ",
+        "image": "url(/imgs/workShop4.jpg)",
+        "icon": "url(/imgs/workShop2.jpg)"
+    }, {
+        "id": 8,
+        "city": "minya",
+        "location": "minya",
+        "name": "The Bos work shop",
+        "phone-number": "010555638510",
+        "rate": 5,
+        "address": "Egpy - Minya ,  Mesala street behind Rosana Resturant Below ElSeha Clinic ",
+        "image": "url(/imgs/workShop5.jpg)",
+        "icon": "url(/imgs/workShop3.jpg)"
+
+    }
+]
