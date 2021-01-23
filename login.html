@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="fonts/fontawesome-free/css/all.min.css">
+    <link rel=" stylesheet" href="css/style.css">
+
+</head>
+
+<body class="login-page">
+
+    <div class="d-grid">
+        <h1 class="form-header">Welcome Back</h1>
+
+        <div class="login-form">
+            <form action="#" onsubmit="return validateForm()">
+                <p class="invalid-login">Incorrect username or password!</p>
+                <table>
+                    <tr>
+                        <td>
+                            <i class="fa fa-user"></i>
+                            <input type="text" id="username" placeholder="enter your username or email" required onfocus="changeIcon(this)" onfocusout="resetIcon(this)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="fa fa-lock"></i>
+                            <input type="password" id="pass" placeholder="enter your password" required onfocus="changeIcon(this)" onfocusout="resetIcon(this)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-check"><input type="checkbox" id="remeber-me">&nbsp; <label for="remeber-me">Remeber me</label></td>
+                    </tr>
+                    <tr>
+                        <td><button type="submit" onclick="login()">Login</button></td>
+                    </tr>
+                    <tr>
+                        <td class="form-link">Don't have account? <a href="/signup.html">Signup Now!</a></td>
+                    </tr>
+
+                </table>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+
+</html>
