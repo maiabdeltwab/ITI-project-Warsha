@@ -11,7 +11,7 @@ function resetIcon(input) {
 }
 
 
-if (localStorage.username && localStorage.password) {
+if (localStorage.username && localStorage.password && eval(localStorage.saved)) {
     document.getElementById('username').value = localStorage.username;
     document.getElementById('pass').value = localStorage.password;
 }
@@ -19,15 +19,25 @@ if (localStorage.username && localStorage.password) {
 var username = document.getElementById('username').value;
 var pass = document.getElementById('pass').value;
 
-function login() {
-    saveLogin();
-    validateFormn();
-}
 
 //check if user input is valid or not 
-function validateFormn() {
-    var invalidText = document.querySelector('.invalid-login');
-    invalidText.style.visibility = 'visible';
+function validateForm() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('pass').value;
+
+
+    var savedUsername = localStorage.getItem('username');
+    var savedEmail = localStorage.getItem('email');
+    var savedPassword = localStorage.getItem('password');
+
+    if ((username == savedUsername || username == savedEmail) && password == savedPassword) {
+        saveLogin();
+        return true;
+    } else {
+        var invalidText = document.querySelector('.invalid-login');
+        invalidText.style.visibility = 'visible';
+        return false;
+    }
 }
 
 
@@ -36,10 +46,8 @@ function saveLogin() {
     var remeberCheck = document.getElementById('remeber-me');
 
     if (remeberCheck.checked) {
-        localStorage.setItem('username', name);
-        localStorage.password = pass;
+        localStorage.saved = true;
     } else {
-        localStorage.removeItem('username');
-        localStorage.removeItem('password');
+        localStorage.saved = false;
     }
 }

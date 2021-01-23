@@ -15,8 +15,6 @@ var pre = document.querySelector(".info-card.pre-form");
 var tab1 = document.querySelector("#tab1");
 var tab2 = document.querySelector("#tab2");
 
-document.onload = infoForm();
-document.onload = getuserInfo();
 
 function infoForm() {
     info.style.display = "block";
@@ -33,7 +31,6 @@ function preForm() {
     info.style.display = "none";
     tab1.style.borderLeft = "none";
     tab1.style.backgroundColor = "#f4f4f4";
-    console.log(pre)
     pre.style.display = "block";
     tab2.style.borderLeft = "9px solid #d89216";
     tab2.style.backgroundColor = "#ffffffa1";
@@ -43,9 +40,25 @@ function preForm() {
 function savePref() {
     var form = document.forms[1];
 
-    localStorage.setItem('carBrand', form.brand);
-    localStorage.setItem('carModel', form.model);
-    localStorage.setItem('location', 'document.forms[1][2].selectedIndex');
-    localStorage.setItem('region', 'document.forms[1][3].selectedIndex');
+    localStorage.setItem('carBrand', form.brand.value);
+    localStorage.setItem('carModel', form.model.value);
+    localStorage.setItem('location', form[2].selectedIndex);
+    localStorage.setItem('region', form[3].selectedIndex);
 
 }
+
+
+function getPref() {
+    var form = document.forms[1];
+
+    form[0].value = localStorage.getItem('carBrand');
+    form[1].value = localStorage.getItem('carModel');
+    form[2].selectedIndex = localStorage.getItem('location');
+    form[3].selectedIndex = localStorage.getItem('region');
+
+}
+
+
+document.onload = infoForm();
+document.onload = getuserInfo();
+document.onload = getPref();
